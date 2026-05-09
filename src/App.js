@@ -8,6 +8,8 @@ import Footer from './Footer';
 function App() {
   const [recherche, setRecherche] = useState("");
   const [ligneSelectionnee, setLigneSelectionnee] = useState(null);
+  // Ajout de l'etst du compteur de recherche .
+  const [compteurRecherche, setCompteurRecherche] = useState(0);
   const lignes = [ 
     { id: 1, numero: "1", depart: "Parcelles Assainies",arrivee: "Plateau", arrets: 14,
     listeArrets: ["Parcelles U14", "Parcelles U10","Camberene", "Patte d'Oie", "Grand Dakar","Colobane", "Ponty", "Plateau"] },
@@ -34,17 +36,34 @@ function App() {
     setLigneSelectionnee(ligne);
   }
 }
+  const gererChangementRecherche = (nouveauTexte) => {
+    setRecherche(nouveauTexte);
+    setCompteurRecherche(compteurRecherche + 1);
+  }
 return (
   <div className="App">
     <Header />
     <main className="contenu">
-      <Recherche valeur={recherche} onChange={setRecherche} />
+      {/* Affichage du compteur */}
+      <div className='Statistiques'>
+        <p>Vous avez effectué <strong>{compteurRecherche}</strong> recherche(s)</p>
+      </div>
+      <Recherche valeur={recherche} 
+        onChange={gererChangementRecherche} 
+        onClear={() => setRecherche("")}
+      />
       <p className="resultat-recherche">
         {lignesFiltrees.length} ligne
         {lignesFiltrees.length > 1 ? 's' : ''} trouvee
         {lignesFiltrees.length > 1 ? 's' : ''}
       </p>
-      {lignesFiltrees.map(ligne => (
+      {/* Condition d'affichage  */}
+      {lignesFiltrees.length === 0 ? (
+        <div className='message-vide'>
+          <p>Aucune ligne trouvee </p>
+        </div>
+      ) : (
+      lignesFiltrees.map(ligne => (
         <LigneBus
           key={ligne.id}
           numero={ligne.numero}
@@ -54,7 +73,8 @@ return (
           estSelectionnee={ligneSelectionnee && ligneSelectionnee.id === ligne.id}
           onClick={() => handleClickLigne(ligne)}
         />
-      ))}
+      ))
+      )}
       {ligneSelectionnee&& <DetailLigne ligne={ligneSelectionnee} />}
     </main>
     <Footer />

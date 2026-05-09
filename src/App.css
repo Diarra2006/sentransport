@@ -32,3 +32,21 @@ padding: 12px;
         margin-right: 12px;
     }
 }
+.message-vide {
+  text-align: center;
+  padding: 40px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border: 1px dashed #ccc;
+  color: #7f8c8d;
+  margin-top: 20px;
+}
+.statistiques {
+    background-color: #e8f4fd;
+    color: #2980b9;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 0.9rem;
+}

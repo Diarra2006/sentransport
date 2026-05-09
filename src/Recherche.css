@@ -17,3 +17,16 @@ border-color: #0a6e31;
 .recherche-input::placeholder {
 color: #b2bec3;
 }
+.recherche {
+  display: flex; 
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.btn-effacer {
+  padding: 10px 15px;
+  background-color: #0a6e31; 
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
