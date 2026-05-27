@@ -92,5 +92,29 @@
       "HLM", 
       "Sandaga"
     ]
+  },
+  {
+    "id": 7,
+    "numero": "1",
+    "depart": "Parcelles",
+    "arrivee": "Palais",
+    "arrets": 3,
+    "listeArrets": [
+      "Petersen",
+      "Almadies",
+      "Parcelles"
+    ]
+  },
+  {
+    "id": 8,
+    "numero": "218",
+    "depart": "Dieupeul",
+    "arrivee": "Campus ESP",
+    "arrets": 3,
+    "listeArrets":[
+      "Dieupeul", 
+      "Liberté 6", 
+      "ESP Dakar"
+    ]
   }
 ]

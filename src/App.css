@@ -70,3 +70,21 @@ padding: 12px;
   font-family: monospace;
   font-size: 0.9rem;
 }
+.btn-recharger {
+  background-color: #2980b9; 
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-recharger:hover {
+  background-color: #3498db; 
+}
+
+.btn-recharger:active {
+  background-color: #1f618d; 
+}
