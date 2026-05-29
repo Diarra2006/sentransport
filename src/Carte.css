@@ -29,3 +29,53 @@
         height: 300px;
     }
 }
+
+/* Style du conteneur d'informations */
+.arret-proche {
+  background-color: #f8f9fa;
+  border-left: 5px solid #e67e22;
+  padding: 12px 20px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Style du bouton Centrer (Exercice 2) */
+.btn-centrer {
+  background-color: #e67e22;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+/* Effet au survol de la souris */
+.btn-centrer:hover {
+  background-color: #d35400;
+}
+
+/* Effet au clic */
+.btn-centrer:active {
+  transform: scale(0.98);
+}
+/* Style du filtre de l'exercice 3 */
+.filtre-container {
+  background-color: #f1f2f6;
+  padding: 10px 15px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+}
+
+.select-ligne {
+  padding: 6px 12px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #ced4da;
+  background-color: white;
+  cursor: pointer;
+}
